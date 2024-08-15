@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static io.restassured.RestAssured.given;
-
 public class OrderRequestHelper extends BaseHTTPClient {
 
     @Step("Get random Ingredient from massive of Ingredients with type \"{type}\"")

@@ -61,7 +61,6 @@ public class OrderCreateTest {
                 .ORDER_CREATE_READ, "ingredients", selectedIngredientsHashSums, existingExtendedUser.getValidAccessToken());
         orderResponseHelper.checkResponseCode(response,SC_OK);
         orderResponseHelper.validateResponseBody(response, "success", true);
-
     }
 
     @Test
@@ -74,6 +73,7 @@ public class OrderCreateTest {
         String[] selectedIngredientsHashSums = orderRequestHelper.createArrayOfHashSumsForOrderCreateRequest(bun, main, sauce);
         Response response = orderRequestHelper.sendPostRequestWithBodyParam(URLS
                 .ORDER_CREATE_READ, "ingredients", selectedIngredientsHashSums);
+
         orderResponseHelper.checkResponseCode(response,SC_OK);
         orderResponseHelper.validateResponseBody(response, "success", true);
     }
