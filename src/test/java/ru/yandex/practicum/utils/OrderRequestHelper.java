@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class OrderRequestHelper extends BaseHTTPClient {
 
-    @Step("Get random Ingredient from massive of Ingredients with type \"{type}\"")
+    @Step("Get random Ingredient from array of Ingredients with type \"{type}\"")
     public Ingredient getRandomIngredientWithType(Ingredients ingredients, String type) {
         List<Ingredient> ingredientsList = new ArrayList<>();
         for (Ingredient ingredient : ingredients.getData()) {
